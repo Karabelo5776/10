@@ -9,12 +9,12 @@ const QRCode = require('qrcode');
 require('dotenv').config();
 
 // Add this check:
-const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
+const frontendUrl = process.env.FRONTEND_URL || 'https://10-azure.vercel.app/';
 console.log(`Allowing requests from: ${frontendUrl}`); 
 const app = express();
 app.use(cors({
   origin: [
-    'https://cloud-app1-2cfee.web.app',
+    'https://10-azure.vercel.app',
     'http://localhost:3000' // Keep for local development
   ],
   credentials: true
